@@ -716,6 +716,9 @@ return {
         rules = false,
         separator = "-",
       },
+      win = {
+        no_overlap = false
+      },
     },
     config = function(_, opts)
       require("which-key").setup(opts)

@@ -282,3 +282,13 @@ end, { desc = "Write all changed buffers" })
 cmd("CloseNotifications", function()
   require("notify").dismiss({ pending = true, silent = true })
 end, { desc = "Dismiss all notifications" })
+
+-- ## EXTRA AUTOCOMMANDS ----------------------------------------------------
+
+-- 11. Have conform.nvim auto format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
