@@ -20,7 +20,7 @@
 --       -> markmap.nvim                   [markdown mindmap]
 
 --       ## ARTIFICIAL INTELLIGENCE
---       -> neural                         [chatgpt code generator]
+--       -> neural                         [chatgpt code generator] (DISABLED)
 --       -> copilot                        [github code suggestions]
 --       -> guess-indent                   [guess-indent]
 
