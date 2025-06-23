@@ -174,34 +174,34 @@ return {
   -- Reliable jdtls support. Must go before mason-lspconfig and lsp-config.
   -- NOTE: Let's use our fork until they merge pull request
   --       https://github.com/nvim-java/nvim-java/pull/376
-  {
-    "zeioth/nvim-java",
-    ft = { "java" },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "neovim/nvim-lspconfig",
-      "mfussenegger/nvim-dap",
-      "mason-org/mason.nvim",
-    },
-    opts = {
-      notifications = {
-        dap = false,
-      },
-      -- NOTE: One of these files must be in your project root directory.
-      --       Otherwise the debugger will end in the wrong directory and fail.
-      root_markers = {
-        'settings.gradle',
-        'settings.gradle.kts',
-        'pom.xml',
-        'build.gradle',
-        'mvnw',
-        'gradlew',
-        'build.gradle',
-        'build.gradle.kts',
-        '.git',
-      },
-    },
-  },
+  -- {
+  --   "zeioth/nvim-java",
+  --   ft = { "java" },
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --     "neovim/nvim-lspconfig",
+  --     "mfussenegger/nvim-dap",
+  --     "mason-org/mason.nvim",
+  --   },
+  --   opts = {
+  --     notifications = {
+  --       dap = false,
+  --     },
+  --     -- NOTE: One of these files must be in your project root directory.
+  --     --       Otherwise the debugger will end in the wrong directory and fail.
+  --     root_markers = {
+  --       'settings.gradle',
+  --       'settings.gradle.kts',
+  --       'pom.xml',
+  --       'build.gradle',
+  --       'mvnw',
+  --       'gradlew',
+  --       'build.gradle',
+  --       'build.gradle.kts',
+  --       '.git',
+  --     },
+  --   },
+  -- },
 
   --  nvim-lspconfig [lsp configs]
   --  https://github.com/neovim/nvim-lspconfig
@@ -236,7 +236,7 @@ return {
   --  https://github.com/zeioth/mason-extra-cmds
   {
     "mason-org/mason.nvim",
-    dependencies = { "zeioth/mason-extra-cmds", opts = {} },
+    dependencies = { "mason-org/mason-registry", "zeioth/mason-extra-cmds", opts = {} },
     cmd = {
       "Mason",
       "MasonInstall",
