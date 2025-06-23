@@ -8,7 +8,7 @@
 --       -> nvim-highlight-colors          [hex colors]
 
 --       ## LSP
---       -> nvim-java                      [java support]
+--       -> nvim-java                      [java support] (DISABLED)
 --       -> mason-lspconfig                [auto start lsp]
 --       -> nvim-lspconfig                 [lsp configs]
 --       -> mason.nvim                     [lsp package manager]
