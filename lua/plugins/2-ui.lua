@@ -3,6 +3,7 @@
 
 --    Sections:
 --       -> tokyonight                  [theme]
+--       -> catppuccin                  [theme]
 --       -> astrotheme                  [theme]
 --       -> alpha-nvim                  [greeter]
 --       -> nvim-notify                 [notifications]
@@ -39,6 +40,10 @@ return {
       },
     }
   },
+
+  --  catppuccin [theme]
+  --  https://github.com/catppuccin/nvim
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   --  astrotheme [theme]
   --  https://github.com/AstroNvim/astrotheme
