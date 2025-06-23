@@ -24,6 +24,7 @@
 --       -> nvim-lightbulb         [lightbulb for code actions]
 --       -> hot-reload.nvim        [config reload]
 --       -> distroupdate.nvim      [distro update]
+--       -> neorg                  [support for neorg files]
 
 local is_android = vim.fn.isdirectory('/data') == 1 -- true if on android
 
@@ -701,6 +702,43 @@ return {
     opts = {
         channel = "stable" -- stable/nightly
     }
+  },
+
+
+  -- neorg [support for neorg files]
+  -- https://github.com/nvim-neorg/neorg
+  {
+    "nvim-neorg/neorg",
+    lazy = false,  -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+    version = "*", -- Pin Neorg to the latest stable release
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {},
+          ["core.concealer"] = {
+            config = {
+              init_open_folds = "always",
+            },
+          },
+          ["core.export"] = {},
+          ["core.export.markdown"] = {
+            config = {
+              extensions = "all",
+            }
+          },
+          ["core.esupports.metagen"] = {
+            config = {
+              template = {
+                { "title" },
+                { "description" },
+                { "date" },
+                { "tags" }
+              }
+            }
+          }
+        },
+      }
+    end,
   },
 
 } -- end of return
