@@ -740,6 +740,7 @@ return {
               },
             },
           },
+          ["core.text-objects"] = {},
         },
       })
     end,
