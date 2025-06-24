@@ -16,7 +16,7 @@ vim.opt.cursorline = true -- Highlight the text line of the cursor.
 vim.opt.expandtab = true -- Enable the use of space in tab.
 vim.opt.fileencoding = "utf-8" -- File content encoding for the buffer.
 vim.opt.fillchars = { eob = " " } -- Disable `~` on nonexistent lines.
-vim.opt.foldenable = false -- Enable fold for nvim-ufo.
+vim.opt.foldenable = true -- Enable fold for nvim-ufo.
 vim.opt.foldlevel = 99 -- set highest foldlevel for nvim-ufo.
 vim.opt.foldlevelstart = 99 -- Start with all code unfolded.
 vim.opt.foldcolumn = "1" -- Show foldcolumn in nvim 0.9+.
