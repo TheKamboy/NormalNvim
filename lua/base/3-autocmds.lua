@@ -317,7 +317,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- 12. Add certain keybinds for Neorg
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "neorg",
+  pattern = "norg",
   callback = function()
     vim.keymap.set("n", "<M-up>", "<Plug>(neorg.text-objects.item-up)", {})
     vim.keymap.set("n", "<M-down>", "<Plug>(neorg.text-objects.item-down)", {})
