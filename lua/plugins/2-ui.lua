@@ -4,6 +4,7 @@
 --    Sections:
 --       -> tokyonight                  [theme]
 --       -> catppuccin                  [theme]
+--       -> pywal16                     [theme]
 --       -> astrotheme                  [theme]
 --       -> alpha-nvim                  [greeter]
 --       -> nvim-notify                 [notifications]
@@ -44,6 +45,10 @@ return {
   --  catppuccin [theme]
   --  https://github.com/catppuccin/nvim
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+  --  pywal16 [theme]
+  --  https://github.com/uZer/pywal16.nvim
+  { 'uZer/pywal16.nvim', name = "pywal16", priority = 1000 },
 
   --  astrotheme [theme]
   --  https://github.com/AstroNvim/astrotheme

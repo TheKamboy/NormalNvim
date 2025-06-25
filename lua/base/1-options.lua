@@ -4,7 +4,8 @@
 -- ----------------------------------------
 
 -- Theme
-vim.g.default_colorscheme = "catppuccin-mocha"
+-- vim.g.default_colorscheme = "catppuccin-mocha"
+vim.g.default_colorscheme = "pywal16"
 
 -- Options --------------------------------------------------------------------
 vim.opt.breakindent = true -- Wrap indent to match  line start.
