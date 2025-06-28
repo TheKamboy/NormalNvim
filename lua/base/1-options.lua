@@ -69,6 +69,9 @@ else
   vim.opt.mouse = "a"
 end -- Enable scroll for android
 
+-- Neovide Support
+if vim.g.neovide then vim.o.guifont = "Maple Mono NF:h10" end
+
 -- Globals --------------------------------------------------------------------
 vim.g.mapleader = " " -- Set leader key.
 vim.g.maplocalleader = "," -- Set default local leader key.
