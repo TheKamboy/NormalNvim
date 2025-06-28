@@ -5,10 +5,11 @@
 
 -- Theme
 -- vim.g.default_colorscheme = "catppuccin-mocha"
-vim.g.default_colorscheme = "pywal16"
+-- vim.g.default_colorscheme = "pywal16"
+vim.g.default_colorscheme = "rose-pine"
 
 -- Options --------------------------------------------------------------------
-vim.opt.breakindent = true -- Wrap indent to match  line start.
+vim.opt.breakindent = true -- Wrap indent to match line start.
 vim.opt.clipboard = "unnamedplus" -- Connection to the system clipboard.
 vim.opt.cmdheight = 0 -- Hide command line unless needed.
 vim.opt.completeopt = { "menu", "menuone", "noselect" } -- Options for insert mode completion.

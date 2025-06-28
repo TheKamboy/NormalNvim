@@ -45,5 +45,9 @@ load_sources({
   "base.3-autocmds", -- critical stuff, don't change the execution order.
 })
 load_colorscheme(vim.g.default_colorscheme)
-vim.api.nvim_set_hl(0, "Comment", { italic = true })
+
+if vim.g.default_colorscheme == "pywal16" then
+  vim.api.nvim_set_hl(0, "Comment", { italic = true })
+end
+
 load_sources_async({ "base.4-mappings" })

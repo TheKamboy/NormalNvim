@@ -5,6 +5,7 @@
 --       -> tokyonight                  [theme]
 --       -> catppuccin                  [theme]
 --       -> pywal16                     [theme]
+--       -> rose-pine                   [theme]
 --       -> astrotheme                  [theme]
 --       -> alpha-nvim                  [greeter]
 --       -> nvim-notify                 [notifications]
@@ -49,6 +50,10 @@ return {
   --  pywal16 [theme]
   --  https://github.com/uZer/pywal16.nvim
   { "uZer/pywal16.nvim", name = "pywal16", priority = 1000 },
+
+  --  rose-pine [theme]
+  --  https://github.com/rose-pine/neovim
+  { "rose-pine/neovim", name = "rose-pine", priority = 1000 },
 
   --  astrotheme [theme]
   --  https://github.com/AstroNvim/astrotheme
