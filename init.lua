@@ -7,7 +7,9 @@ local function load_source(source)
   local status_ok, error = pcall(require, source)
   if not status_ok then
     vim.api.nvim_echo(
-      {{"Failed to load " .. source .. "\n\n" .. error}}, true, {err = true}
+      { { "Failed to load " .. source .. "\n\n" .. error } },
+      true,
+      { err = true }
     )
   end
 end
@@ -21,21 +23,19 @@ end
 
 local function load_sources_async(source_files)
   for _, source in ipairs(source_files) do
-    vim.defer_fn(function()
-      load_source(source)
-    end, 50)
+    vim.defer_fn(function() load_source(source) end, 50)
   end
 end
 
 local function load_colorscheme(colorscheme)
-    if vim.g.default_colorscheme then
-      if not pcall(vim.cmd.colorscheme, colorscheme) then
-        require("base.utils").notify(
-          "Error setting up colorscheme: " .. colorscheme,
-          vim.log.levels.ERROR
-        )
-      end
+  if vim.g.default_colorscheme then
+    if not pcall(vim.cmd.colorscheme, colorscheme) then
+      require("base.utils").notify(
+        "Error setting up colorscheme: " .. colorscheme,
+        vim.log.levels.ERROR
+      )
     end
+  end
 end
 
 -- Call the functions defined above.
@@ -45,4 +45,5 @@ load_sources({
   "base.3-autocmds", -- critical stuff, don't change the execution order.
 })
 load_colorscheme(vim.g.default_colorscheme)
+vim.api.nvim_set_hl(0, "Comment", { italic = true })
 load_sources_async({ "base.4-mappings" })
